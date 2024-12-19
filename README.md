@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js 15 Authentication with NextAuth.js v5
 
-## Getting Started
+A starter template for setting up authentication in Next.js 15 using NextAuth.js v5. This project demonstrates both Server Component and Client Component approaches for implementing authentication.
 
-First, run the development server:
+For more details read my [Medium post](https://chamith.medium.com/setting-up-authentication-in-next-js-15-using-nextauth-js-v5-264f54d5471f)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Features**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- GitHub authentication using NextAuth.js v5
+- Server Component-based authentication with Server Actions
+- Client Component-based authentication example
+- Easily extensible for other authentication providers
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## **Getting Started**
 
-To learn more about Next.js, take a look at the following resources:
+### **Prerequisites**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js 16.8 or newer
+- npm or any other package manager like yarn/pnpm
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### **Installation**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   git clone https://github.com/chambits/next-auth-intro.git
+   ```
+
+2. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+3. Set up GitHub OAuth App
+
+- Go to [GitHub Developer Settings](https://github.com/settings/developers).
+- Create a new OAuth app and set the callback URL to: http://localhost:3000/api/auth/callback/github
+
+4. Add credentials to the .env.local file:
+
+   ```env
+   NEXTAUTH_SECRET=your-nextauth-secret
+   GITHUB_ID=your-github-client-id
+   GITHUB_SECRET=your-github-client-secret
+   ```
+
+5. Run in dev mode
+
+   ```bash
+   npm run dev
+   ```
