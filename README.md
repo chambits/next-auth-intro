@@ -17,13 +17,6 @@ For more details read my [Medium post](https://chamith.medium.com/setting-up-aut
 
 ## **Getting Started**
 
-### **Prerequisites**
-
-- Node.js 16.8 or newer
-- npm or any other package manager like yarn/pnpm
-
----
-
 ### **Installation**
 
 1. Clone the repository:
